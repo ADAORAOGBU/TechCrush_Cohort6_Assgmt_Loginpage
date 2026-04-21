@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
   ratingContainer: { flexDirection: 'row', alignItems: 'center' },
   
   topDoctorCard: {
-    flexDirection: 'row', // Aligns image and text side-by-side
+    flexDirection: 'row', 
     backgroundColor: 'white',
     padding: 20,
     borderRadius: 20,
@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
   topDoctorSub: {
     fontSize: 13,
     color: '#718096',
-    marginVertical: 4,
+    marginVertical: 5,
   },
   ratingRow: {
     flexDirection: 'row',
