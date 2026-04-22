@@ -28,8 +28,10 @@ export default function GetStarted() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#4C6FFF', '#899add']}
-        style={StyleSheet.absoluteFill}
+        colors={['#3B62FF', '#1943ec', '#091547']} 
+    start={{ x: 0, y: 0 }}
+  end={{ x: 0, y: 1 }}
+  style={StyleSheet.absoluteFill}
       />
 
       <SafeAreaView style={styles.safeArea}>

@@ -44,7 +44,8 @@ export default function Signup() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
         style={{ flex: 1 }}
       >
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ flexGrow: 1 }}>
           <View style={styles.content}>
             
             {/* Back Button */}
@@ -103,13 +104,18 @@ export default function Signup() {
             </View>
 
             {/* Footer */}
-            <TouchableOpacity onPress={() => router.push('./login')} style={styles.footer}>
-              <Text style={styles.footerText}>
-                Already have an account? <Text style={styles.loginLink}>Log In</Text>
-              </Text>
+            <TouchableOpacity 
+            onPress={() => router.push('/(auth)/login')} 
+            style={styles.footer}
+        >
+            <Text style={styles.footerText}> 
+              Already have an account? {' '}
+               <Text style={styles.loginBlueText}>Login</Text>
+            </Text>
             </TouchableOpacity>
-
-          </View>
+  
+  
+            </View>
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -118,7 +124,7 @@ export default function Signup() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#FFFFFF' },
-  content: { paddingHorizontal: 30, paddingBottom: 40 },
+  content: { flex:1, paddingHorizontal: 20, paddingBottom: 40 },
   backBtn: { marginTop: 20, marginLeft: -10 },
   textHeader: { marginTop: 30 },
   title: { fontSize: 28, fontWeight: 'bold', color: '#1A1A1A' },
@@ -146,7 +152,21 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   nextButtonText: { color: 'white', fontSize: 18, fontWeight: 'bold' },
-  footer: { marginTop: 30, alignItems: 'center' },
-  footerText: { color: '#718096', fontSize: 14 },
-  loginLink: { color: '#3B62FF', fontWeight: 'bold' }
+  footer: { 
+  marginTop: 40,
+  marginBottom: 30,          
+   alignItems: 'stretch', 
+   justifyContent: 'center',
+   width: '100%',
+},
+footerText: { 
+  color: '#718096', 
+  fontSize: 14,   
+  textAlign: 'center'         
+},
+loginBlueText: {
+  color: '#3B62FF',
+  fontWeight: 'bold',
+},
+
 });
